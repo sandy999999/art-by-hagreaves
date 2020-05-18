@@ -1,0 +1,19 @@
+body{
+    background-color: $sky;
+}
+
+.error{
+    color: red;
+}
+
+button{
+    background-color: $rust !important;
+}
+
+.navbar{
+    background-color: $teal;
+}
+
+.search{
+    border: 1px solid $rust;
+}

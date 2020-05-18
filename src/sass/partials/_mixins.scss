@@ -1,0 +1,43 @@
+@function rems($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: rems($size);
+}
+
+@mixin padding($size) {
+    padding: rems($size);
+}
+
+@mixin padding-left($size) {
+    padding: rems($size);
+}
+
+@mixin padding-right($size) {
+    padding: rems($size);
+}
+
+@mixin margin($size) {
+    margin: rems($size);
+}
+
+@mixin margin-left($size) {
+    margin-left: rems($size);
+}
+
+@mixin margin-right($size) {
+    margin-right: rems($size);
+}
+
+@mixin margin-top($size) {
+    margin-top: rems($size);
+}
+
+@mixin margin-bottom($size) {
+    margin-bottom: rems($size);
+}
+
+//  @include mixin-name(size);
+
