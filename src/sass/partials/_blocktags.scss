@@ -1,19 +1,32 @@
 body{
-    background-color: $sky;
+    background-color: $darkblue;
+}
+
+#main-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+#main-content{
+    flex: 1;
 }
 
 .error{
     color: red;
 }
 
-button{
-    background-color: $rust !important;
-}
-
-.navbar{
-    background-color: $teal;
+.button{
+    background-color: rgb(16,29,48);
+    background: $gradient;
 }
 
 .search{
-    border: 1px solid $rust;
+    border: 1px solid $yellow;
+}
+
+.icon{
+    max-width: 15%;
 }

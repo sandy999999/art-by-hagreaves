@@ -1,0 +1,18 @@
+.logo{
+    width: 15%;
+}
+
+.navbar_flex{
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+
+#basic-navbar-nav{
+    position: absolute;
+    background-color: white;
+    color: $darkblue;
+    border: 1px solid;
+    @include padding-left(10px);
+    @include padding-right(10px);
+}

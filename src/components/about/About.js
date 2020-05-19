@@ -5,12 +5,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 
-export function Home() {
+export function About() {
     return (
         <>
         <Container>
             <Row className="[ row-top row-top_home ]">
-                <Heading title="HeArt by Hargreaves" />
+                <Heading title="Bio - Thomas Hargreaves" />
             </Row>
             <Row>
                 <Col md={6}>
@@ -25,4 +25,4 @@ export function Home() {
     );
 }
 
-export default Home;
+export default About;
