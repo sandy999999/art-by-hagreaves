@@ -1,4 +1,21 @@
-.social-nav{
-    width: 50%;
+.footer-link{
+    color: white;
+    @include padding(15px);
+    &:hover{
+        transform: scale(1.2);
+        color: white;
+        text-decoration: none;
+    }  
+}
+
+
+.cta{
+    text-decoration: none;
+    color: $sunset;
+    font-weight: bold;
+    &:hover{
+        text-decoration: none;
+        color: $yellow;
+    }
 }
 

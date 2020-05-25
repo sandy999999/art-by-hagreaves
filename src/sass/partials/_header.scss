@@ -1,15 +1,29 @@
 .logo{
-    width: 15%;
+    width: 30%;
 }
 
 .navbar_flex{
-    justify-content: space-between;
     flex-wrap: nowrap;
+}
+
+.social-nav{
+    flex-direction: row;
+}
+.social-link{
+    @include padding(15px);
+    .icon{
+        width: 50px;
+        border-radius: 15%;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        &:hover{
+            transform: scale(1.2);
+            color: white;
+        }
+    }
 }
 
 
 #basic-navbar-nav{
-    position: absolute;
     background-color: white;
     color: $darkblue;
     border: 1px solid;

@@ -1,6 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Heading from "../layout/Heading";
@@ -29,8 +30,9 @@ function Contact() {
 	}
 
 	return (
-        <Form onSubmit={handleSubmit(onSubmit)}>
-            <Heading title="Contact us" />
+        <Container>
+            <Form onSubmit={handleSubmit(onSubmit)}>
+            <Heading title="Contact" />
             <Form.Group>
                 <Form.Label>First Name</Form.Label>
                 <Form.Control name="firstName" placeholder="Enter your first name" ref={contact} />
@@ -53,7 +55,8 @@ function Contact() {
             </Form.Group>
 
             <Button type="submit">Submit</Button>
-        </Form>
+            </Form>
+        </Container>
 	);
 }
 

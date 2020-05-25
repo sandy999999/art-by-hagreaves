@@ -1,5 +1,7 @@
 body{
     background-color: $darkblue;
+    overflow-x: hidden;
+    color: white;
 }
 
 #main-container{
@@ -23,10 +25,7 @@ body{
     background: $gradient;
 }
 
-.search{
-    border: 1px solid $yellow;
-}
 
-.icon{
-    max-width: 15%;
+.logo-h1{
+    display: none;
 }
