@@ -1,0 +1,58 @@
+.more-icon{
+    position: absolute;
+    width: 10%;
+    top: 15px;
+    left: 15px;
+    opacity: 75%;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 25px -5px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 25px -5px rgba(255,255,255,1);
+    box-shadow: 0px 0px 25px -5px rgba(255,255,255,1);
+    border-radius: 50%;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+.card-body{
+    z-index: 3;
+    width: 100%;
+    background-color: $darkblue;
+    color: white;
+    @include padding(15px);
+    @include margin-right(15px);
+}
+
+
+.masonry-container{
+	width: 100%;
+    margin: auto;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+.masonry{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: stretch;
+	width: 100%;
+    margin: auto;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-content: stretch;
+	flex-grow: 1;
+}
+.tile{
+    position: relative;
+    @include padding(15px);
+	.card-img{
+        -webkit-box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
+        -moz-box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
+        box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
+		width: 100%;
+	}
+}
+

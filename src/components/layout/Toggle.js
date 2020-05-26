@@ -11,7 +11,7 @@ class Toggle extends Component{
     handleClick = () => {
         this.setState({
             open: !this.state.open
-        });
+        });     
     };
 
     render() {

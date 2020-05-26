@@ -33,7 +33,8 @@ class Cart extends Component{
             )
         return(
             <Container>
-                <div className="cart">
+                <div className="cart_dropdown">
+                <button type="button" class="close" aria-hidden="true">×</button>
                     <h5>Your cart:</h5>
                     <ul className="cart-collection">
                         {addedItems}

@@ -38,21 +38,27 @@
 }
 
 .dropdown_menu{
+    z-index: 1;
     position: absolute;
     background-color: white;
     border: 1px solid;
     @include padding-left(10px);
     @include padding-right(10px);
     @include margin-top(20px);
+
     .dropdown_link{
         text-decoration: none;
         color: $darkblue;
         font-weight: bold;
         @include padding(5px);
         &:hover{
-            color: $sunset;
+            color: $purple;
             transform: scale(1.2);
             text-decoration: none;
         }
+    }
+
+    .dropdown_link-cta{
+        background-color: $darkblue;
     }
 }

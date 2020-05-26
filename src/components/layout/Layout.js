@@ -12,15 +12,16 @@ import Home from "../home/Home";
 import Cart from "../cart/Cart";
 import About from "../about/About";
 import Contact from "../contact/Contact";
-import Copyrights from "../standard/Copyrights";
-import Terms from "../standard/Terms";
-import Logo from "../../images/compressed/logo-white.png";
+import Copyrights from "../copyrights/Copyrights";
+import Terms from "../terms/Terms";
+import Logo from "../../images/icons/logo-white.png";
 import Facebook from "../../images/icons/facebook.png";
 import Instagram from "../../images/icons/instagram.png";
 import Twitch from "../../images/icons/twitch.png";
 import Carticon from "../../images/icons/cart-white.png";
 import Toggle from "./Toggle";
 import HamburgerMenu from 'react-hamburger-menu';
+import ArtworkDetail from "../gallery/ArtworkDetail";
 
 function Layout(){
     return (
@@ -63,7 +64,7 @@ function Layout(){
                                         <NavLink activeClassName="active" to="/cart" exact className="[ dropdown_link ]">Cart</NavLink>
                                         <NavLink activeClassName="active" to="/about" className="[ dropdown_link ]">About</NavLink>
                                         <NavLink activeClassName="active" to="/contact" exact className="[ dropdown_link ]">Contact</NavLink>
-                                        <NavLink to="/" className="[ dropdown_link ]">
+                                        <NavLink to="/" className="[ dropdown_link dropdown_link-cta ]">
                                             <a className="[ cta ]" href="https://streamlabs.com/templito/tip">Donate</a>
                                         </NavLink>
                                     </Nav>
@@ -80,6 +81,7 @@ function Layout(){
                         <Route path="/" exact component={Home} />
                         <Route path="/about" exact component={About} />
                         <Route path="/cart" exact component={Cart} />
+                        <Route path="/gallery/:item.id" component={ArtworkDetail} />
                         <Route path="/contact" exact component={Contact} />
                         <Route path="/copyrights" exact component={Copyrights} />
                         <Route path="/terms" exact component={Terms} />
@@ -87,7 +89,7 @@ function Layout(){
                 </Container>
 
                 <Navbar className="[ footer ]">
-                    <Container className="justify-content-between">
+                    <Container className="[ footer-container justify-content-between ]">
                         <Nav className="[ footer-nav ]">
                             <NavLink activeClassName="active" to="/copyrights" className="[ footer-link ]">
                                 Copyrights

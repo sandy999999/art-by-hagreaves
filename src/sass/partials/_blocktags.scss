@@ -1,7 +1,19 @@
+@mixin font-face($font-name, $font-path, $font-weight, $font-style){
+  @font-face {
+    font-family: $font-name;
+    font-style : $font-style;
+    font-weight: $font-weight;
+  }
+}
+
+@include font-face("Exo", "../../fonts/exo/Exo-Black", 400, normal);
+
+
 body{
     background-color: $darkblue;
     overflow-x: hidden;
     color: white;
+    font-family: Exo, segoe ui, helvetica, arial;
 }
 
 #main-container{
@@ -10,7 +22,7 @@ body{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-  }
+}
   
 #main-content{
     flex: 1;
@@ -31,11 +43,6 @@ body{
     display: none;
 }
 
-h1{
-    @include fontSize(40px);
-    @include padding-left(15px);
-}
-
 .active{
    color: $sunset; 
 }
@@ -46,10 +53,17 @@ h1{
     font-weight: bold;
     &:hover{
         text-decoration: none;
-        color: $sunset;
+        color: $purple;
     }
 }
 
-.items-container{
-    overflow-y: scroll;
+
+.custom_row{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    @include margin-left(15px);
+    p{
+        @include margin-left(25px);
+    }
 }
