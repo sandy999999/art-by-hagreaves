@@ -1,3 +1,7 @@
+.footer{
+    @include margin-bottom(15px);
+}
+
 .footer-link{
     color: white;
     @include padding(15px);
@@ -9,13 +13,5 @@
 }
 
 
-.cta{
-    text-decoration: none;
-    color: $sunset;
-    font-weight: bold;
-    &:hover{
-        text-decoration: none;
-        color: $yellow;
-    }
-}
+
 

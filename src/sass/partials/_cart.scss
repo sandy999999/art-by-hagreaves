@@ -1,0 +1,26 @@
+.cart{
+    position: absolute;
+    background-color: white;
+    border: 1px solid;
+    color: $darkblue;
+    @include padding-left(10px);
+    @include padding-right(10px);
+    @include margin-top(20px);
+}
+.added-items{
+    max-width: 50%;
+    .item-img{
+            max-width: 50px;
+    }
+}
+
+
+.card{
+    background-color: inherit;
+    max-width: 30%;
+    @include padding(15px);
+    img{
+        max-width: 100%;
+    }
+}
+

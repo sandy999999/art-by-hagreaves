@@ -4,11 +4,13 @@
 
 .navbar_flex{
     flex-wrap: nowrap;
+    @include margin-top(20px);
 }
 
 .social-nav{
     flex-direction: row;
 }
+
 .social-link{
     @include padding(15px);
     .icon{
@@ -22,11 +24,35 @@
     }
 }
 
+.icon{
+    width: 50px;
+}
 
-#basic-navbar-nav{
+.cart_container{
+    cursor: pointer;
+    @include margin-right(25px);
+}
+
+.hamburger_container{
+    cursor: pointer;
+}
+
+.dropdown_menu{
+    position: absolute;
     background-color: white;
-    color: $darkblue;
     border: 1px solid;
     @include padding-left(10px);
     @include padding-right(10px);
+    @include margin-top(20px);
+    .dropdown_link{
+        text-decoration: none;
+        color: $darkblue;
+        font-weight: bold;
+        @include padding(5px);
+        &:hover{
+            color: $sunset;
+            transform: scale(1.2);
+            text-decoration: none;
+        }
+    }
 }
