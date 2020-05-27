@@ -5,6 +5,7 @@ class Toggle extends Component{
         super()
         this.state = {
             open: false,
+            close: true
         }
     }
 

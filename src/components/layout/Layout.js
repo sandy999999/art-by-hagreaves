@@ -40,7 +40,7 @@ function Layout(){
                             <div className="cart_container">
                                 <img className="icon" src={Carticon} onClick={handleClick}/>
                                 {open && 
-                                    <Cart className="cart" /> 
+                                    <Cart /> 
                                 }
                             </div>
                         )}

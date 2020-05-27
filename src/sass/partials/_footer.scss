@@ -1,9 +1,16 @@
 .footer{
-    @include margin-bottom(15px);
+   bottom: 0;
+   position: fixed;
+   left: 0px;
+   bottom: 0px;
+   height: 40px;
+   width: 100%;
+   @include margin-bottom(5px);
 }
 
 .footer-link{
     color: white;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
     @include padding(15px);
     &:hover{
         transform: scale(1.2);
@@ -16,5 +23,21 @@
     // under certain screen size  flex-direction: column;
 }
 
+.social-nav{
+    flex-direction: row;
+}
+
+.social-link{
+    @include padding(15px);
+    .icon{
+        width: 25px;
+        border-radius: 15%;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        &:hover{
+            transform: scale(1.5);
+            color: white;
+        }
+    }
+}
 
 

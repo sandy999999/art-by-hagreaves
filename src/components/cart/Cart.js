@@ -1,9 +1,30 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { removeItem, addQuantity, subtractQuantity } from "./CartActions";
 import Container from "react-bootstrap/Container";
 
+
 class Cart extends Component{
+    
+    handleRemove = (id) => {
+        this.props.removeItem(id);
+    }
+
+    handleAddQuantity = (id) => {
+        this.props.addQuantity(id);
+    }
+
+    handleSubtractQuantity = (id) => {
+        this.props.subtractQuantity(id);
+    }
+
+    handleClose = () => {
+        document.getElementById("cart_dropdown").style.display ="none";
+    };
+
+
+
     render(){
 
         let addedItems = this.props.items.length ?
@@ -21,7 +42,7 @@ class Cart extends Component{
                                     <Link to="/cart">X</Link>
                                     <Link to="/cart">Y</Link>
                                 </div>
-                                <button>Remove</button>
+                                <button onClick={()=>{this.handleRemove(item.id)}}>Remove</button>
                             </div>
                         </div>
                     )
@@ -33,13 +54,14 @@ class Cart extends Component{
             )
         return(
             <Container>
-                <div className="cart_dropdown">
-                <button type="button" class="close" aria-hidden="true">×</button>
+                <div id="cart_dropdown" className="cart_dropdown">
+                <button type="button" className="close" aria-hidden="true" onClick={this.handleClose}>&times;</button>
+                    <br />
                     <h5>Your cart:</h5>
-                    <ul className="cart-collection">
+                    <Container className="cart-collection">
                         {addedItems}
-                    </ul>
-                </div>
+                    </Container>
+                </div> 
             </Container>
         )
     }
@@ -51,5 +73,13 @@ const mapStateToProps = (state)=>{
     }
 }
 
+const mapDispatchToProps = (dispatch)=>{
+    return{
+        removeItem: (id)=>{dispatch(removeItem(id))},
+        addQuantity: (id)=>{dispatch(addQuantity(id))},
+        subtractQuantity: (id)=>{dispatch(subtractQuantity(id))}
+    }
+}
 
-export default connect(mapStateToProps)(Cart)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart)

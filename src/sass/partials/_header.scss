@@ -7,22 +7,6 @@
     @include margin-top(20px);
 }
 
-.social-nav{
-    flex-direction: row;
-}
-
-.social-link{
-    @include padding(15px);
-    .icon{
-        width: 50px;
-        border-radius: 15%;
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        &:hover{
-            transform: scale(1.2);
-            color: white;
-        }
-    }
-}
 
 .icon{
     width: 50px;
@@ -50,15 +34,12 @@
         text-decoration: none;
         color: $darkblue;
         font-weight: bold;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         @include padding(5px);
         &:hover{
             color: $purple;
             transform: scale(1.2);
             text-decoration: none;
         }
-    }
-
-    .dropdown_link-cta{
-        background-color: $darkblue;
     }
 }
