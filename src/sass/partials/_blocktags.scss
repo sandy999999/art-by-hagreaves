@@ -59,12 +59,8 @@ body{
 }
 
 
-.custom_row{
+.heading_row{
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    @include margin-left(15px);
-    p{
-        @include margin-left(25px);
-    }
 }

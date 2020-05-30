@@ -1,6 +1,6 @@
-.more-icon{
+.more_icon{
     position: absolute;
-    width: 10%;
+    width: 30px;
     top: 15px;
     right: 15px;
     opacity: 75%;
@@ -14,13 +14,12 @@
     }
 }
 
+
 .card-body{
     z-index: 3;
     width: 100%;
     background-color: $darkblue;
     color: white;
-    @include padding(15px);
-    @include margin-right(15px);
 }
 
 
@@ -51,7 +50,10 @@
         -webkit-box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
         -moz-box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
         box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
-		width: 100%;
+        width: 100%;
 	}
 }
 
+.filter-row{
+    @include margin-left(15px);
+}

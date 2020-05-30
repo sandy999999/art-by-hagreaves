@@ -5,21 +5,21 @@ class Toggle extends Component{
         super()
         this.state = {
             open: false,
-            close: true
         }
     }
 
+
     handleClick = () => {
         this.setState({
-            open: !this.state.open
-        });     
+            open: !this.state.open,
+        });
     };
 
     render() {
         const{children}=this.props;
         return children({
                 open: this.state.open,
-                handleClick: this.handleClick
+                handleClick: this.handleClick,
         })};
 }
 

@@ -6,7 +6,7 @@ import Card from "react-bootstrap/Card";
 class ArtworkDetail extends Component{
     render(){
 
-        let details = this.props.items.map(item=>{
+        let details = this.props.products.map(item=>{
                     return(
                         <Card>
                             <Card.Img className="card-img" src={item.img} alt={item.title}/>

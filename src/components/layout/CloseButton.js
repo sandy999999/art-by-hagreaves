@@ -1,9 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 
-const CloseButton = ({ onClick }) => (
-  <div>
-    <button className="close" aria-hidden="true" onClick={onClick}>x</button>
-  </div>
-)
+export default class CloseButton extends Component {
+    state = {
+        close: true,
+    }
 
-export default CloseButton;
+    closeParent = () => {
+        this.setState({
+            close: !this.state.close
+        })
+    }
+}

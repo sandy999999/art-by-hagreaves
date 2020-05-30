@@ -1,47 +1,48 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addToCart } from "../cart/CartActions";
+import { addToCart } from "../actions/CartActions";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Toggle from "../layout/Toggle";
 import Masonry from "./Masonry";
 import MoreIcon from "../../images/icons/more-sunset.png";
-import { Link } from "react-router-dom";
+import Filter from "./Filter";
+import { fetchProducts } from "../actions/ProductActions";
+import currency from "../../currency";
+import Row from "react-bootstrap/Row";
 
 let brakePoints = [350, 500, 750];
 
 class Gallery extends Component {
-
-    handleAddClick = (id)=>{
-        this.props.addToCart(id);
-    }
-
+    
+    componentDidMount() {
+        this.props.fetchProducts();
+      }
 
     render(){
-        let itemList = this.props.items.map(item=>{
+    
+        const itemList = this.props.products.map(product=>{
+
             return(
                 <Toggle>
                     {({ open, handleClick }) =>(
-                    <div className="tile" key={item.id}>
-                        <Card.Img className="card-img" src={item.img} alt={item.title}/>
-                        <img id="plus-icon" className="[ more-icon ]" onClick={handleClick} src={MoreIcon} alt="See more information about artwork"/>
+                    <div className="tile" key={product.id}>
+                        <Card.Img className="card-img" src={`products/${product.id}.jpg`} alt={product.title} onClick={this.handleShowDialog}/>
+
+                        <img id="plus-icon" className="[ more_icon ]" src={MoreIcon} onClick={handleClick} alt="See more information about artwork"/>
                         {open &&
                             <Card.Body className="card-body">
-                                <Card.Title className="card-title">{item.title}</Card.Title>
+                                <Card.Title className="card-title">{product.title}</Card.Title>
                                 <Card.Text className="card-content">
-                                    {item.desc}
+                                    {product.description}
                                     <br/>
                                     <br/>
-                                    <p>Size: {item.size}</p>
-                                    <b>Price:</b> NOK {item.price}
+                                    <b>Size:</b> {product.dimensions}
+                                    <br/>
+                                    <b>Price:</b> {currency.formatCurrency(product.price)}
                                 </Card.Text>
-                                <Button to="/" onClick={()=>{this.handleAddClick(item.id)}}>Add to cart</Button>
-                                <Link to={"gallery/" + item.id}>
-                                    <Button variant="secondary" block>
-                                    Details
-                                    </Button>
-                                </Link>
+                                <Button onClick={(e) => this.props.addToCart(this.props.cartItems, product)}>Add to cart</Button>
                             </Card.Body>
                         }
                     </div>
@@ -52,6 +53,18 @@ class Gallery extends Component {
 
         return(
             <Container>
+                <Toggle>
+                    {({ open, handleClick }) =>(
+                        <Container>
+                            <Row>
+                                <label onClick={handleClick} alt="See filter option">Sort options</label>
+                            {open &&
+                                <Filter />
+                            }
+                            </Row>
+                        </Container>
+                    )}
+                </Toggle>
 				<div className="masonry-container">
 					<Masonry brakePoints={brakePoints}>
                         {itemList}
@@ -62,16 +75,9 @@ class Gallery extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return{
-        items: state.items
-    }
-}
+const mapStateToProps = (state) => ({
+    products: state.products.filteredItems,
+    cartItems: state.cart.items,
+  });
 
-const mapDispatchToProps = (dispatch)=>{
-    return{
-        addToCart: (id)=>{dispatch(addToCart(id))}
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Gallery);
+export default connect(mapStateToProps, { fetchProducts, addToCart })(Gallery);

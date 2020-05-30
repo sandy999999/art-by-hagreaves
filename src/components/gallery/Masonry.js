@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 
-let brakePoints = [350, 500, 750];
-
 class Masonry extends Component{
       constructor(props){
             super(props);

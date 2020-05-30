@@ -7,8 +7,8 @@ import Container from "react-bootstrap/Container";
 export function Home() {
     return (
         <Container>
-            <div className="custom_row">
-                <Heading title="Artworks" />
+            <div className="heading_row">
+                <Heading title="Artworks " />
             </div>
             <Gallery />
         </Container>

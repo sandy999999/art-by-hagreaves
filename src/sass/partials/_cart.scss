@@ -9,10 +9,22 @@
     @include margin-top(20px);
 }
 
+.cart_container{
+    cursor: pointer;
+    @include margin-right(20px);
+}
+
+
 .added-items{
     max-width: 50%;
+    li{
+        list-style: none;
+    }
     .item-img{
             max-width: 50px;
     }
 }
 
+.trashcan{
+    width: 10px;
+}

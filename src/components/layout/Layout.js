@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import {
@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Home from "../home/Home";
-import Cart from "../cart/Cart";
 import About from "../about/About";
 import Contact from "../contact/Contact";
 import Copyrights from "../copyrights/Copyrights";
@@ -22,6 +21,8 @@ import Carticon from "../../images/icons/cart-white.png";
 import Toggle from "./Toggle";
 import HamburgerMenu from 'react-hamburger-menu';
 import ArtworkDetail from "../gallery/ArtworkDetail";
+import Checkout from "../cart/Checkout";
+import CartDropdown from "../cart/CartDropdown";
 
 function Layout(){
     return (
@@ -38,9 +39,9 @@ function Layout(){
                     <Toggle>
                     {({ open, handleClick }) =>(
                             <div className="cart_container">
-                                <img className="icon" src={Carticon} onClick={handleClick}/>
+                                <img className="icon" src={Carticon} onClick={handleClick} alt="Show shopping cart"/>
                                 {open && 
-                                    <Cart /> 
+                                     <CartDropdown />
                                 }
                             </div>
                         )}
@@ -50,18 +51,18 @@ function Layout(){
                         {({ open, handleClick }) =>(
                             <div className="hamburger_container">
                                 <HamburgerMenu
-                                    className="hamburger_icon"
+                                    className="hamburger"
                                     isOpen={open}
                                     menuClicked={handleClick}
-                                    width={45}
-                                    height={30}
+                                    width={35}
+                                    height={25}
                                     strokeWidth={4}
                                     color='white'
                                     animationDuration={0.5}
                                 />
-                                {open && 
+                                {open &&
                                     <Nav className="[ dropdown_menu ]">
-                                        <NavLink activeClassName="active" to="/cart" exact className="[ dropdown_link ]">Cart</NavLink>
+                                        <NavLink activeClassName="active" to="/checkout" exact className="[ dropdown_link ]">Cart</NavLink>
                                         <NavLink activeClassName="active" to="/about" className="[ dropdown_link ]">About</NavLink>
                                         <NavLink activeClassName="active" to="/contact" exact className="[ dropdown_link ]">Contact</NavLink>
                                         <NavLink to="/" className="[ dropdown_link dropdown_link-cta ]">
@@ -80,11 +81,12 @@ function Layout(){
                     <Switch>
                         <Route path="/" exact component={Home} />
                         <Route path="/about" exact component={About} />
-                        <Route path="/cart" exact component={Cart} />
+                        <Route path="/cart" exact component={Checkout} />
                         <Route path="/gallery/:item.id" component={ArtworkDetail} />
                         <Route path="/contact" exact component={Contact} />
                         <Route path="/copyrights" exact component={Copyrights} />
                         <Route path="/terms" exact component={Terms} />
+                        <Route path="/checkout" exact component={Checkout} />
                     </Switch>
                 </Container>
 

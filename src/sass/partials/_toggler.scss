@@ -1,0 +1,39 @@
+:root {
+    --dropdown_menu-position: absolute;
+    --dropdown_menu-bg-color: white;
+    --dropdown_menu-border: 1px solid;
+    --timeout: 350ms;
+    --fade-from-color: transparent;
+    --fade-to-color: white;
+}
+
+
+.display-enter{
+    position: var(--dropdown_menu-position);
+    background-color: var(--dropdown_menu-bg-color);
+    border: var(--dropdown_menu-border);
+    color: var(--fade-from-color);
+}
+
+.display-enter-active {
+    position: var(--dropdown_menu-position);
+    background-color: var(--dropdown_menu-bg-color);
+    border: var(--dropdown_menu-border);
+    color: var(--fade-to-color);
+    transition: all var(--timeout);
+}
+
+.display-exit{
+    position: var(--dropdown_menu-position);
+    background-color: var(--dropdown_menu-bg-color);
+    border: var(--dropdown_menu-border);
+    color: var(--fade-to-color);
+}
+  
+.display-exit-active {
+    position: var(--dropdown_menu-position);
+    background-color: var(--dropdown_menu-bg-color);
+    border: var(--dropdown_menu-border);
+    color: var(--fade-from-color);
+    transition: all var(--timeout);
+}
