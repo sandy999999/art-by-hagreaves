@@ -4,7 +4,7 @@ import Currency from "../../currency";
 import { addToCart, removeFromCart } from "../actions/CartActions";
 import Container from "react-bootstrap/Container";
 import Trashcan from "../../images/icons/trash-blue.png";
-
+import { NavLink } from "react-router-dom";
 
 class CartDropdown extends Component {
   render() {
@@ -40,12 +40,7 @@ class CartDropdown extends Component {
                 cartItems.reduce((a, c) => a + c.price * c.count, 0)
               )}
             </b>
-            <button
-              onClick={() => alert("Todo: Implement checkout page.")}
-              className="btn btn-primary"
-            >
-              checkout
-            </button>
+            <NavLink to="/checkout" exact className="[ btn btn-primary ]">Checkout</NavLink>
           </Container>
         )}
         </div>

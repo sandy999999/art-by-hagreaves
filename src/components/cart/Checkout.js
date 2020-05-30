@@ -4,7 +4,7 @@ import util from "../../currency";
 import { addToCart, removeFromCart } from "../actions/CartActions";
 import Container from "react-bootstrap/Container";
 import Trashcan from "../../images/icons/trash-blue.png";
-
+import NavLink from "react-router-dom";
 
 class Checkout extends Component {
   render() {
