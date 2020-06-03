@@ -8,7 +8,6 @@ class Toggle extends Component{
         }
     }
 
-
     handleClick = () => {
         this.setState({
             open: !this.state.open,
@@ -16,7 +15,8 @@ class Toggle extends Component{
     };
 
     render() {
-        const{children}=this.props;
+        const {children} = this.props;
+
         return children({
                 open: this.state.open,
                 handleClick: this.handleClick,

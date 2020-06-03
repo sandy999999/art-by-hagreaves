@@ -13,7 +13,7 @@ import About from "../about/About";
 import Contact from "../contact/Contact";
 import Copyrights from "../copyrights/Copyrights";
 import Terms from "../terms/Terms";
-import Logo from "../../images/icons/logo-white.png";
+import Logo from "../../images/icons/logo-gradient.png";
 import Facebook from "../../images/icons/facebook.png";
 import Instagram from "../../images/icons/instagram.png";
 import Twitch from "../../images/icons/twitch.png";
@@ -62,7 +62,7 @@ function Layout(){
                                 />
                                 {open &&
                                     <Nav className="[ dropdown_menu ]">
-                                        <NavLink activeClassName="active" to="/checkout" exact className="[ dropdown_link ]">Cart</NavLink>
+                                        <NavLink activeClassName="active" to="/checkout" exact className="[ dropdown_link ]">Checkout</NavLink>
                                         <NavLink activeClassName="active" to="/about" className="[ dropdown_link ]">About</NavLink>
                                         <NavLink activeClassName="active" to="/contact" exact className="[ dropdown_link ]">Contact</NavLink>
                                         <NavLink to="/" className="[ dropdown_link dropdown_link-cta ]">

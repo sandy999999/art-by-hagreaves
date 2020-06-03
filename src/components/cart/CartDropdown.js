@@ -13,7 +13,6 @@ class CartDropdown extends Component {
     return (
     <Container>
         <div id="cart_dropdown" className="cart_dropdown">
-        {/*<button type="button" className="close" aria-hidden="true" onClick={this.handleClose}>&times;</button>*/}
         {cartItems.length === 0 ? (
           "Cart is empty"
         ) : (

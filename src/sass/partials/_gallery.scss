@@ -1,25 +1,36 @@
-.more_icon{
-    position: absolute;
-    width: 30px;
-    top: 15px;
-    right: 15px;
-    opacity: 75%;
+.plus_icon{
     cursor: pointer;
-    -webkit-box-shadow: 0px 0px 25px -5px rgba(255,255,255,1);
-    -moz-box-shadow: 0px 0px 25px -5px rgba(255,255,255,1);
-    box-shadow: 0px 0px 25px -5px rgba(255,255,255,1);
-    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    @include fontSize(30px);
+    @include padding-right(5px);
     &:hover{
-        transform: scale(1.2);
+        color: $sunset;
     }
 }
 
+.plus_icon-filter{
+    cursor: pointer;
+    @include fontSize(30px);
+    @include padding-right(5px);
+    &:hover{
+        color: $sunset;
+    }
+}
+
+
+.closed{
+    transition: all 0.3s ease-in-out;
+    transform: rotate(45deg);
+}
 
 .card-body{
     z-index: 3;
     width: 100%;
     background-color: $darkblue;
     color: white;
+    @include padding(5px);
+    @include margin-top(10px);
 }
 
 
