@@ -58,9 +58,6 @@ body{
     }
 }
 
-
-.heading_row{
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
+.heading{
+    @include margin-left(25px);
 }

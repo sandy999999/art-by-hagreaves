@@ -17,14 +17,11 @@
 
 .added-items{
     max-width: 50%;
-    li{
-        list-style: none;
-    }
-    .item-img{
-            max-width: 50px;
+    .item_img{
+        width: 100px;
     }
 }
 
 .trashcan{
-    width: 10px;
+    width: 15px;
 }

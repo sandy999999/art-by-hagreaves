@@ -10,10 +10,24 @@ import Filter from "./Filter";
 import { fetchProducts } from "../actions/ProductActions";
 import currency from "../../currency";
 import Row from "react-bootstrap/Row";
+import Modal from "react-bootstrap/Modal";
 
 let brakePoints = [350, 500, 750];
 
 class Gallery extends Component {
+    
+    constructor(){
+        super()
+        this.state = {
+            modalOpen: false,
+        }
+    }
+
+    openModal = () => {
+        this.setState({
+            modalOpen: true,
+        });
+    };
     
     componentDidMount() {
         this.props.fetchProducts();
@@ -27,15 +41,14 @@ class Gallery extends Component {
                 <Toggle>
                     {({ open, handleClick }) =>(
                     <div className="tile" key={product.id}>
-                        <Card.Img className="card-img" src={`products/${product.id}.jpg`} alt={product.title}/>
-
-
-                        {/*<div className={`circle-plus ${open ? "opened" : "closed"}`} onClick={handleClick} >
-                            <div className="circle">
-                                <div className="horizontal"></div>
-                                <div className="vertical"></div>
-                            </div>
-                            </div>*/}
+                        <Card.Img className="card_img" src={`products/${product.id}.jpg`} alt={product.title} onClick={() => this.openModal(true)}/>
+                        
+                        <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+                            <Modal.Header closeButton />
+                            <Modal.Body>
+                                <img className="modal_img" src={`products/${product.id}.jpg`} alt={product.title}/>
+                            </Modal.Body>''
+                        </Modal>
 
                         <p className={`plus_icon ${open ? "closed" : "opened"}`} onClick={handleClick}>+</p>
 
@@ -61,19 +74,9 @@ class Gallery extends Component {
 
         return(
             <Container>
-                <Toggle>
-                    {({ open, handleClick }) =>(
-                        <Container>
-                            <Row>
-                                <p className={`plus_icon-filter ${open ? "closed" : "opened"}`} onClick={handleClick}>+</p>
-
-                            {open && 
-                                <Filter />
-                            }
-                            </Row>
-                        </Container>
-                    )}
-                </Toggle>
+                <Row>
+                    <Filter />
+                </Row>
 				<div className="masonry-container">
 					<Masonry brakePoints={brakePoints}>
                         {itemList}

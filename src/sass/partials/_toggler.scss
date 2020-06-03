@@ -1,62 +1,24 @@
-.closed {
-    .vertical {
-      transition: all 0.5s ease-in-out;
-      transform: rotate(-90deg);
-    }
-    .horizontal {
-      transition: all 0.5s ease-in-out;
-      transform: rotate(-90deg);
-      opacity: 1;
-    }
+.plus_icon{
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  @include fontSize(30px);
+  @include padding-right(5px);
+  &:hover{
+      color: $sunset;
   }
-  
-  .opened {
-    opacity: 1;
-    .vertical {
-      transition: all 0.5s ease-in-out;
-      transform: rotate(90deg);
-    }
-    .horizontal {
-      transition: all 0.5s ease-in-out;
-      transform: rotate(90deg);
-      opacity: 0;
-    }
-  }
-  
-.circle-plus {
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    height: 2.5em;
-    width: 2.5em;
-    @include margin-top (5px);
 }
-  
-  .circle-plus .circle {
-      position: relative;
-      width: 2em;
-      height: 2em;
-      border-radius: 100%;
+
+.plus_icon-filter{
+  cursor: pointer;
+  @include fontSize(30px);
+  @include padding-right(5px);
+  &:hover{
+      color: $sunset;
   }
-  .circle-plus .circle .horizontal {
-      position: absolute;
-      background-color: white;
-      width: 15px;
-      height: 2.5px;
-      left: 50%;
-      margin-left: -7.5px;
-      top: 50%;
-      margin-top: -1px;
-  }
-  .circle-plus .circle .vertical {
-      position: absolute;
-      background-color: white;
-      width: 2.5px;
-      height: 15px;
-      left: 50%;
-      margin-left: -1.25px;
-      top: 50%;
-      margin-top: -7px;
-  }
-  
-  
+}
+
+.closed{
+  transition: all 0.3s ease-in-out;
+  transform: rotate(45deg);
+}

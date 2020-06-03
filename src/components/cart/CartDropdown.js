@@ -24,12 +24,11 @@ class CartDropdown extends Component {
           <Container className="cart-collection">
             <div className="added-items">
                 {cartItems.map((item) => (
-                <li className="cart_item" key={item.id}>
-                    <b>{item.title}</b>
+                <div className="cart_item" key={item.id}>
+                    <img className="item_img" src={`products/${item.id}.jpg`} alt={item.title}/>
                     <img src={Trashcan} className="trashcan" alt="Remove from cart" onClick={(e) => this.props.removeFromCart(this.props.cartItems, item)}/>
-                    <br />
-                    <p>{item.count}</p>
-                </li>
+                    <p>x{item.count}</p>
+                </div>
                 ))}
             </div>
 

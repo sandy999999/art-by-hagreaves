@@ -11,6 +11,7 @@
     "react": "^16.13.1",
     "react-animated-burgers": "^1.2.7",
     "react-bootstrap": "^1.0.1",
+    "react-breakpoints": "^3.0.3",
     "react-cart-components": "^2.1.0",
     "react-dom": "^16.13.1",
     "react-hamburger-menu": "^1.2.1",

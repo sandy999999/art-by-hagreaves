@@ -4,12 +4,10 @@ import Gallery from "../gallery/Gallery";
 import Container from "react-bootstrap/Container";
 
 
-export function Home() {
+function Home() {
     return (
         <Container>
-            <div className="heading_row">
-                <Heading title="Artworks " />
-            </div>
+            <Heading title="Artworks " />
             <Gallery />
         </Container>
     );
