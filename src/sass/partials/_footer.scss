@@ -3,10 +3,9 @@
    position: fixed;
    left: 0px;
    bottom: 0px;
-   height: 40px;
+   height: 50px;
    width: 100%;
    background-color: $darkblue;
-   padding-bottom: 5px;
    @include margin-left(15px);
    @include margin-right(15px);
 }
