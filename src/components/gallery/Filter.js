@@ -8,7 +8,7 @@ class Filter extends Component {
       <div className="[ row filter-row ]">
         <div className="col-md-4">
           <label>
-            Order by
+            Sort by
             <select
               className="form-control"
               value={this.props.sort}
@@ -19,7 +19,7 @@ class Filter extends Component {
                 );
               }}
             >
-              <option value="">Price</option>
+              <option value="">PRICE</option>
               <option value="lowestprice">Lowest to highest</option>
               <option value="highestprice">Highest to lowest</option>
             </select>
@@ -39,11 +39,11 @@ class Filter extends Component {
                 );
               }}
             >
-              <option value="">ALL</option>
+              <option value="">TYPE</option>
               <option value="Prints">Prints</option>
               <option value="Canvas">Canvas</option>
               <option value="Original Drawing">Original Drawing</option>
-              <option value="Other Works">Others</option>
+              <option value="Others">Others</option>
             </select>
           </label>
         </div>
@@ -61,7 +61,7 @@ class Filter extends Component {
                 );
               }}
             >
-              <option value="">ALL</option>
+              <option value="">SIZE</option>
               <option value="Print">Print</option>
               <option value="Small">Small</option>
               <option value="Medium">Medium</option>

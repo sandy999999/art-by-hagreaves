@@ -5,7 +5,10 @@
    bottom: 0px;
    height: 40px;
    width: 100%;
-   @include margin-bottom(5px);
+   background-color: $darkblue;
+   padding-bottom: 5px;
+   @include margin-left(15px);
+   @include margin-right(15px);
 }
 
 .footer-link{

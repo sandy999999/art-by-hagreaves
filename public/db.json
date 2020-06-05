@@ -5,7 +5,7 @@
         "title": "Om Tat Sat",
         "description": "Aerosol on mdf, framed in oak",
         "sized": "Medium",
-        "dimensions": "150x100 cm",
+        "dimensions": "155x105 cm",
         "price": 15000,
         "type": "Canvas"
       },
@@ -25,6 +25,276 @@
         "sized": "Medium",
         "dimensions": "unknown",
         "price": 12000,
+        "type": "Canvas"
+      },
+      {
+        "id": 4,
+        "title": "This Way Up",
+        "description": "Spray paint on MDF",
+        "sized": "Medium",
+        "dimensions": "105x205 cm",
+        "price": 0,
+        "type": "Canvas"
+      }, 
+      {
+        "id": 5,
+        "title": "Girl with Bubbles",
+        "description": "Stencils and spray paint on MDF / wood",
+        "sized": "Medium",
+        "dimensions": "155x105 cm",
+        "price": 14000,
+        "type": "Canvas"
+      },
+      {
+        "id": 6,
+        "title": "Flowerphant",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 11000,
+        "type": "Canvas"
+      },
+      {
+        "id": 7,
+        "title": "Wheel of Karma",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 8,
+        "title": "Duality",
+        "description": "Acrylics, aerosol and ink on soft fabric canvas",
+        "sized": "Big",
+        "dimensions": "400x200 cm",
+        "price": 0,
+        "type": "Canvas"
+      },      
+      {
+        "id": 9,
+        "title": "Paradox of Consciousness",
+        "description": "Stencils and spray paint on MDF / wood",
+        "sized": "Medium",
+        "dimensions": "155x105 cm",
+        "price": 14000,
+        "type": "Canvas"
+      },   
+      {
+        "id": 10,
+        "title": "Flowerphant Dark",
+        "description": "Spray paint on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 11000,
+        "type": "Canvas"
+      },
+      {
+        "id": 11,
+        "title": "Kundalini Journey",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 15000,
+        "type": "Canvas"
+      },
+      {
+        "id": 12,
+        "title": "Metaphant",
+        "description": "Spray paint and acrylics on wood",
+        "sized": "Medium",
+        "dimensions": "100x100 cm",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 13,
+        "title": "Reefer Madness",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "120x120 cm",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 14,
+        "title": "Gender",
+        "description": "Stencils and spray paints on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 10000,
+        "type": "Canvas"
+      },
+      {
+        "id": 15,
+        "title": "Gender+",
+        "description": "Stencils and spray paints on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 10000,
+        "type": "Canvas"
+      },
+      {
+        "id": 16,
+        "title": "Astral Plane",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "unknown",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 17,
+        "title": "Jungle Fever",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 13000,
+        "type": "Canvas"
+      },
+      {
+        "id": 18,
+        "title": "Contemplation",
+        "description": "Spray paint on MDF",
+        "sized": "Medium",
+        "dimensions": "95x95 cm",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 19,
+        "title": "Female Future",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "95x95 cm",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 20,
+        "title": "Leopard",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 21,
+        "title": "Wake Up",
+        "description": "Spray paint on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 10000,
+        "type": "Canvas"
+      },
+      {
+        "id": 22,
+        "title": "Out of Your League",
+        "description": "Spray paint and acrylics on MDF",
+        "sized": "Medium",
+        "dimensions": "Uknown",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 23,
+        "title": "Fuck It",
+        "description": "Spray paint MDF",
+        "sized": "Big",
+        "dimensions": "140x140 cm",
+        "price": 12000,
+        "type": "Canvas"
+      },
+      {
+        "id": 24,
+        "title": "Wake Up II",
+        "description": "Spray paint on MDF",
+        "sized": "Medium",
+        "dimensions": "105x105 cm",
+        "price": 0,
+        "type": "Canvas"
+      },
+      {
+        "id": 25,
+        "title": "Neon Nights",
+        "description": "Spray paint on wood",
+        "sized": "Medium",
+        "dimensions": "75x62 cm",
+        "price": 0,
+        "type": "Others"
+      },
+      {
+        "id": 26,
+        "title": "Sweet Life",
+        "description": "Spray paint and acrylics on wood",
+        "sized": "Small",
+        "dimensions": "60x54 cm",
+        "price": 4000,
+        "type": "Others"
+      },
+      {
+        "id": 27,
+        "title": "The Times Are A-Changin",
+        "description": "Spray paint on canvas",
+        "sized": "Small",
+        "dimensions": "80x100 cm",
+        "price": 4000,
+        "type": "Canvas"
+      },
+      {
+        "id": 28,
+        "title": "How Bizarre",
+        "description": "Pen and markers on paper",
+        "sized": "Print",
+        "dimensions": "23x23 cm",
+        "price": 700,
+        "type": "Prints"
+      },
+      {
+        "id": 29,
+        "title": "Fungi",
+        "description": "Pen and markers on paper",
+        "sized": "Print",
+        "dimensions": "unknown",
+        "price": 0,
+        "type": "Original Drawing"
+      },
+      {
+        "id": 30,
+        "title": "All Who Fall",
+        "description": "Pen and markers on paper",
+        "sized": "Print",
+        "dimensions": "42x30 cm",
+        "price": 1000,
+        "type": "Prints"
+      },
+      {
+        "id": 31,
+        "title": "The Grind",
+        "description": "Pen and markers on paper",
+        "sized": "Print",
+        "dimensions": "42x30 cm",
+        "price": 1000,
+        "type": "Prints"
+      },
+      {
+        "id": 32,
+        "title": "Imaginarium",
+        "description": "Pen and markers on paper",
+        "sized": "Print",
+        "dimensions": "42x30 cm",
+        "price": 1000,
+        "type": "Prints"
+      },
+      {
+        "id": 33,
+        "title": "Enigma",
+        "description": "Ink and aerosol on mdf, framed in oak",
+        "sized": "Medium",
+        "dimensions": "150x100 cm",
+        "price": 16000,
         "type": "Canvas"
       }
     ]

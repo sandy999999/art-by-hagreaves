@@ -16,19 +16,6 @@ let brakePoints = [350, 500, 750];
 
 class Gallery extends Component {
     
-    constructor(){
-        super()
-        this.state = {
-            modalOpen: false,
-        }
-    }
-
-    openModal = () => {
-        this.setState({
-            modalOpen: true,
-        });
-    };
-    
     componentDidMount() {
         this.props.fetchProducts();
       }
@@ -41,7 +28,7 @@ class Gallery extends Component {
                 <Toggle>
                     {({ open, handleClick }) =>(
                     <div className="tile" key={product.id}>
-                        <Card.Img className="card_img" src={`products/${product.id}.jpg`} alt={product.title} onClick={() => this.openModal(true)}/>
+                        <Card.Img className="card_img" src={`products/${product.id}.jpg`} alt={product.title}/>
                         
                         <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
                             <Modal.Header closeButton />
@@ -50,12 +37,12 @@ class Gallery extends Component {
                             </Modal.Body>''
                         </Modal>
 
-                        <p className={`plus_icon ${open ? "closed" : "opened"}`} onClick={handleClick}>+</p>
+                        <div className={`plus_icon ${open ? "closed" : "opened"}`} onClick={handleClick}>+</div>
 
                         {open &&
-                            <Card.Body className="card-body">
-                                <Card.Title className="card-title">{product.title}</Card.Title>
-                                <Card.Text className="card-content">
+                            <Card.Body className="card_body">
+                                <Card.Title className="card_title">{product.title}</Card.Title>
+                                <Card.Text className="card_content">
                                     {product.description}
                                     <br/>
                                     <br/>
@@ -63,7 +50,7 @@ class Gallery extends Component {
                                     <br/>
                                     <b>Price:</b> {currency.formatCurrency(product.price)}
                                 </Card.Text>
-                                <Button onClick={(e) => this.props.addToCart(this.props.cartItems, product)}>Add to cart</Button>
+                                <Button className="button" onClick={(e) => this.props.addToCart(this.props.cartItems, product)}>Add to cart</Button>
                             </Card.Body>
                         }
                     </div>
@@ -77,7 +64,7 @@ class Gallery extends Component {
                 <Row>
                     <Filter />
                 </Row>
-				<div className="masonry-container">
+				<div className="masonry_container">
 					<Masonry brakePoints={brakePoints}>
                         {itemList}
 					</Masonry>

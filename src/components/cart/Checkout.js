@@ -4,6 +4,7 @@ import util from "../../currency";
 import { addToCart, removeFromCart } from "../actions/CartActions";
 import Container from "react-bootstrap/Container";
 import Trashcan from "../../images/icons/trash-blue.png";
+import Button from "react-bootstrap/Button";
 
 class Checkout extends Component {
   render() {
@@ -44,12 +45,12 @@ class Checkout extends Component {
                 cartItems.reduce((a, c) => a + c.price * c.count, 0)
               )}
             </b>
-            <button
+            <Button
               onClick={() => alert("Todo: Implement checkout page.")}
-              className="btn btn-primary"
+              className="button btn btn-primary"
             >
               checkout
-            </button>
+            </Button>
           </Container>
         )}
     </Container>

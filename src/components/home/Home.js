@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 function Home() {
     return (
         <Container>
-            <Heading title="Artworks " />
+            <Heading title="Gallery " />
             <Gallery />
         </Container>
     );

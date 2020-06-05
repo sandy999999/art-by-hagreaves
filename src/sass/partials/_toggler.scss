@@ -9,13 +9,8 @@
   }
 }
 
-.plus_icon-filter{
-  cursor: pointer;
-  @include fontSize(30px);
-  @include padding-right(5px);
-  &:hover{
-      color: $sunset;
-  }
+.opened{
+  @include margin-bottom(10px);
 }
 
 .closed{

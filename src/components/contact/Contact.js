@@ -31,12 +31,16 @@ function Contact() {
 
 	return (
         <Container>
-            <Form onSubmit={handleSubmit(onSubmit)}>
+            <Form className="form" onSubmit={handleSubmit(onSubmit)}>
             <Heading title="Contact" />
+
+            <Container className="form_group">
             <Form.Group>
+                <br/>
                 <Form.Label>First Name</Form.Label>
                 <Form.Control name="firstName" placeholder="Enter your first name" ref={contact} />
                 {errors.firstName && <ErrorMessage>{errors.firstName.message}</ErrorMessage>}
+                <br/>
                 <Form.Label>Last Name</Form.Label>
                 <Form.Control name="lastName" placeholder="Enter your last name" ref={contact} />
                 {errors.lastName && <ErrorMessage>{errors.lastName.message}</ErrorMessage>}
@@ -54,7 +58,8 @@ function Contact() {
                 {errors.message && <ErrorMessage>{errors.message.message}</ErrorMessage>}
             </Form.Group>
 
-            <Button type="submit">Submit</Button>
+            <Button className="button" type="submit">Submit</Button>
+            </Container>
             </Form>
         </Container>
 	);
