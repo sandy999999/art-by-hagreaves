@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import util from "../../currency";
-import { addToCart, removeFromCart } from "../actions/CartActions";
+import util from "../../utils/currency";
+import { addToCart, removeFromCart } from "../../store/actions/CartActions";
 import Container from "react-bootstrap/Container";
 import Trashcan from "../../images/icons/trash-blue.png";
 import Button from "react-bootstrap/Button";

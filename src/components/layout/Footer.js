@@ -19,9 +19,7 @@ function Footer(){
                 <NavLink activeClassName="active" to="/terms" className="[ footer-link ]">
                     Terms & Conditions
                 </NavLink>
-                <NavLink to="/" className="[ footer-link ]">
-                    <a className="[ cta ]" href="https://streamlabs.com/templito/tip">Donate</a>
-                </NavLink>
+                <a className="[ footer-link cta ]" href="https://streamlabs.com/templito/tip">Donate</a>
             </Nav>
             <Nav className="[ social-nav ]">
                 <a className="[ social-link ]" href="https://www.facebook.com/thomashargreavesartist"><img className="icon" src={Facebook} alt="Hargreaves Facebook Profile"/></a>
