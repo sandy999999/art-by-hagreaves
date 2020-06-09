@@ -1,0 +1,16 @@
+.filter-row{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (min-width: $breakpoint-mobile) {
+    .select{
+        width: 85px;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .select{
+        width: 150px;
+    }
+}

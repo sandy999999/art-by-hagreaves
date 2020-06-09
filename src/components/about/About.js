@@ -9,10 +9,8 @@ import Bio from "../../images/compressed/bio.jpg";
 export function About() {
     return (
         <Container>
-                <Row className="heading_row">
-                    <Heading title="Thomas Hargreaves " />
-                </Row>
-                <Row className="row">
+                <Heading title="Thomas Hargreaves " />
+                <Row>
                     <Col md={6}>
                         <p>Hi! Welcome to my website. This is where I showcase my art, thoughts, sketches, events and exhibitions. Take a look and dont hesitate to contact me if you find anything of interest.</p>
                     </Col>

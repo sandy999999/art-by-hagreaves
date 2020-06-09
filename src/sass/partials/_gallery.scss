@@ -6,6 +6,7 @@
     @include padding(5px);
     @include margin-top(10px);
     .card_content{
+        @include margin-left(0px);
         @include fontSize(14px);
     }
 }
@@ -44,5 +45,5 @@
 }
 
 .filter-row{
-    @include margin-left(15px);
+    @include margin-left(5px);
 }

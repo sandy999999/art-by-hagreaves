@@ -1,13 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { filterProductsSize, filterProductsType, sortProducts } from "../../store/actions/ProductActions";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import Form from "react-bootstrap/Form";
 
 class Filter extends Component {
   render() {
     return (
-      <div className="[ row filter-row ]">
-        <div className="col-md-4">
-          <label>
+      <Row className="[ filter-row ]">
+        <Col md={4}>
+          <Form.Label>
             Sort by
             <select
               className="form-control"
@@ -23,11 +26,11 @@ class Filter extends Component {
               <option value="lowestprice">Lowest to highest</option>
               <option value="highestprice">Highest to lowest</option>
             </select>
-          </label>
-        </div>
-        <div className="col-md-4">
-          <label>
-            {" "}
+          </Form.Label>
+        </Col>
+        
+        <Col md={4}>
+          <Form.Label>
             Type
             <select
               className="form-control"
@@ -45,11 +48,11 @@ class Filter extends Component {
               <option value="Original Drawing">Original Drawing</option>
               <option value="Others">Others</option>
             </select>
-          </label>
-        </div>
-        <div className="col-md-4">
-          <label>
-            {" "}
+          </Form.Label>
+        </Col>
+
+        <Col md={4}>
+          <Form.Label>
             Size
             <select
               className="form-control"
@@ -67,9 +70,10 @@ class Filter extends Component {
               <option value="Medium">Medium</option>
               <option value="Big">Big</option>
             </select>
-          </label>
-        </div>
-      </div>
+          </Form.Label>
+        </Col>
+
+      </Row>
     );
   }
 }

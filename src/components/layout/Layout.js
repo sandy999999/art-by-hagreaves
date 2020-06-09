@@ -12,14 +12,13 @@ import Copyrights from "../copyrights/Copyrights";
 import Terms from "../terms/Terms";
 import Checkout from "../cart/Checkout";
 import Header from "./Header";
-import Footer from "./Footer";
+import Footer from "./footer/Footer";
 
 function Layout(){
     return (
         <>
         <Router>
             <Header/>
-
 
                 <Container fluid id="main-content"> 
                     <Switch>

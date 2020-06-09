@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Currency from "../../utils/currency";
-import { addToCart, removeFromCart } from "../../store/actions/CartActions";
+import { addToCart, removeFromCart, addQuantity, subtractQuantity } from "../../store/actions/CartActions";
 import Container from "react-bootstrap/Container";
 import Trashcan from "../../images/icons/trash-blue.png";
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 import Button from "react-bootstrap/Button";
 
 
@@ -23,13 +23,19 @@ class CartDropdown extends Component {
           </div>
         )}
         {cartItems.length > 0 && (
-          <Container className="cart-collection">
-            <div className="added-items">
+          <Container>
+            <div className="added_items">
                 {cartItems.map((item) => (
                 <div className="cart_item" key={item.id}>
                     <img className="item_img" src={`products/${item.id}.jpg`} alt={item.title}/>
+
+                    <b>x{item.count}</b>
+
                     <img src={Trashcan} className="trashcan" alt="Remove from cart" onClick={(e) => this.props.removeFromCart(this.props.cartItems, item)}/>
-                    <p>x{item.count}</p>
+                      <div className="add-remove">
+                        <div className="quantity_icon" onClick={(e) => addQuantity(cartItems, item)}>+</div>
+                        <div className="quantity_icon" onClick={(e) => subtractQuantity(cartItems, item)}>-</div>
+                      </div>
                 </div>
                 ))}
             </div>

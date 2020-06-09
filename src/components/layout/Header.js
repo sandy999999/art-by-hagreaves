@@ -15,12 +15,13 @@ function Header() {
 return(
 
 <Container>
-<Navbar className="[ navbar_flex ]" expand="true">
+<Navbar className="[ navbar_flex ]">
     <NavLink to="/" exact>
         <img className="logo" src={Logo} alt="Hargreaves Logo"/>
         <h1 className="logo-h1">Art by Hargreaves</h1>
     </NavLink>
-    
+
+    <div className="navbar_icons">
     <Toggle>
     {({ open, handleClick }) =>(
             <div className="cart_container">
@@ -50,14 +51,15 @@ return(
                         <NavLink activeClassName="active" to="/checkout" exact className="[ dropdown_link ]">Checkout</NavLink>
                         <NavLink activeClassName="active" to="/about" className="[ dropdown_link ]">About</NavLink>
                         <NavLink activeClassName="active" to="/contact" exact className="[ dropdown_link ]">Contact</NavLink>
-                        <NavLink to="/" className="[ dropdown_link dropdown_link-cta ]">
-                            <a className="[ cta ]" href="https://streamlabs.com/templito/tip">Donate</a>
-                        </NavLink>
+                        <a className="[ dropdown_link dropdown_link-cta cta ]" href="https://streamlabs.com/templito/tip">Donate</a>
                     </Nav>
                 }
             </div>
         )}
     </Toggle>
+
+    </div>
+
 </Navbar>
 </Container>
 

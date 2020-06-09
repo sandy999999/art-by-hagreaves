@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addToCart } from "../../store/actions/CartActions";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Toggle from "../layout/Toggle";
 import Masonry from "./Masonry";
 import Filter from "./Filter";
 import { fetchProducts } from "../../store/actions/ProductActions";
-import currency from "../../utils/currency";
 import Row from "react-bootstrap/Row";
 import Modal from "react-bootstrap/Modal";
 import ProductDetails from "../product/ProductDetails";

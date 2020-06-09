@@ -10,7 +10,7 @@ export function About() {
     return (
         <Container>
                 <Row className="heading_row">
-                    <Heading title="Thomas Hargreaves " />
+                    <Heading title="Copyrights " />
                 </Row>
                 <Row className="row">
                     <Col md={6}>

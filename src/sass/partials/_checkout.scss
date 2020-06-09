@@ -1,0 +1,16 @@
+
+.checkout_li{
+    max-width: 50%;
+    list-style: none;
+}
+
+.checkout_img{
+    max-width: 10%;
+}
+
+.cart_total{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    @include margin-left(25px);
+}

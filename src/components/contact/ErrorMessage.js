@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function ErrorMessage({ children }) {
     return (
-        <div class="error">{ children }</div>
+        <div className="error">{ children }</div>
     );
 }
 

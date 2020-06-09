@@ -1,15 +1,27 @@
 .logo{
-    width: 30%;
+    max-width: 150px;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .logo{
+        max-width: 300px;
+    }
 }
 
 .navbar_flex{
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
     @include margin-top(20px);
 }
 
-
 .icon{
     width: 40px;
+    @include margin-right(15px);
+}
+
+.navbar_icons{
+    display: inline-flex;
+    align-items: center;
 }
 
 .hamburger_container{
@@ -17,8 +29,8 @@
 }
 
 .dropdown_menu{
-    z-index: 1;
     position: absolute;
+    right: 0;
     background-color: white;
     border: 1px solid;
     @include padding-left(5px);
