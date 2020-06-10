@@ -1,43 +1,57 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import {
   filterProductsSize,
   filterProductsType,
-  sortProducts,
+  filterProductsPrice,
 } from "../../store/actions/ProductActions";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 
-class Filter extends Component {
-  render() {
+function Filter(props) {
+
+  const [scrollPosition, setSrollPosition] = useState(0);
+  const handleScroll = () => {
+      const position = window.pageYOffset;
+      setSrollPosition(position);
+  };
+  
+  useEffect(() => {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+
+      return () => {
+          window.removeEventListener('scroll', handleScroll);
+      }
+  },[]);
+
     return (
-      <Row className="[ filter-row ]">
-        <Col md={4}>
+      <Row onScroll={handleScroll} className={`filter_row ${scrollPosition ? 'sticky_filter' : ''}`}>
+        <Col>
           <Form.Label>
             Sort by
             <select
               className="form-control"
-              value={this.props.sort}
+              value={props.sort}
               onChange={(event) => {
-                this.props.sortProducts(this.props.filteredProducts, event.target.value);
+                props.filterProductsPrice(props.filteredProducts, event.target.value);
               }}
             >
               <option value="">PRICE</option>
-              <option value="lowestprice">Lowest to highest</option>
-              <option value="highestprice">Highest to lowest</option>
+              <option value="lowestprice">Low to high</option>
+              <option value="highestprice">High to low</option>
             </select>
           </Form.Label>
         </Col>
 
-        <Col md={4}>
+        <Col>
           <Form.Label>
             Type
             <select
               className="form-control"
-              value={this.props.type}
+              value={props.type}
               onChange={(event) => {
-                this.props.filterProductsType(this.props.products, event.target.value);
+                props.filterProductsType(props.products, event.target.value);
               }}
             >
               <option value="">TYPE</option>
@@ -49,14 +63,14 @@ class Filter extends Component {
           </Form.Label>
         </Col>
 
-        <Col md={4}>
+        <Col>
           <Form.Label>
             Size
             <select
               className="form-control"
-              value={this.props.size}
+              value={props.size}
               onChange={(event) => {
-                this.props.filterProductsSize(this.props.products, event.target.value);
+                props.filterProductsSize(props.products, event.target.value);
               }}
             >
               <option value="">SIZE</option>
@@ -69,8 +83,8 @@ class Filter extends Component {
         </Col>
       </Row>
     );
-  }
 }
+
 const mapStateToProps = (state) => ({
   products: state.products.items,
   filteredProducts: state.products.filteredItems,
@@ -81,5 +95,5 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, {
   filterProductsSize,
   filterProductsType,
-  sortProducts,
+  filterProductsPrice,
 })(Filter);

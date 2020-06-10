@@ -7,6 +7,16 @@ import { addToCart } from "../../store/actions/CartActions";
 
 
 function ProductDetails({ handleClick, open, product, addToCart, cartItems }) {   
+    let AddToCartDisplayed;
+    let PriceDisplayed;
+    if(product.price!==0){
+        AddToCartDisplayed = <Button className="button" onClick={(e) => addToCart(cartItems, product)}>Add to cart</Button>;
+        PriceDisplayed = <><b>Price:</b> {currency.formatCurrency(product.price)}</>;         
+    } else{
+        AddToCartDisplayed = null;
+        PriceDisplayed = <><br/><b>{currency.formatCurrency(product.price)}</b></>;
+    }
+
     return (     
     <>       
         <div className={`plus_icon ${open ? 'closed' : 'opened'}`} onClick={handleClick}>+       
@@ -20,10 +30,10 @@ function ProductDetails({ handleClick, open, product, addToCart, cartItems }) {
                     <br />             
                     <br />
                     <b>Size:</b> {product.dimensions}             
-                    <br />             
-                    <b>Price:</b> {currency.formatCurrency(product.price)}           
-                </Card.Text>           
-                <Button className="button" onClick={(e) => addToCart(cartItems, product)}>Add to cart</Button>         
+                    <br />          
+                    {PriceDisplayed}           
+                </Card.Text>
+                {AddToCartDisplayed}     
             </Card.Body>       
         )}     
     </>   

@@ -1,49 +1,63 @@
-.card_body{
+.card_body {
     z-index: 3;
     width: 100%;
     background-color: $darkblue;
     color: white;
     @include padding(5px);
     @include margin-top(10px);
-    .card_content{
+
+    .card_content {
         @include margin-left(0px);
         @include fontSize(14px);
     }
 }
 
 
-.masonry_container{
-	width: 100%;
+.masonry_container {
+    width: 100%;
     margin: auto;
     max-height: 100vh;
 }
-.masonry{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-content: stretch;
-	width: 100%;
+
+
+.masonry {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    width: 100%;
     margin: auto;
 }
-.column{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-content: stretch;
-	flex-grow: 1;
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-grow: 1;
 }
-.tile{
+
+.tile {
     position: relative;
     @include padding(15px);
     @include margin-bottom(20px);
-	.card-img{
-        -webkit-box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
-        -moz-box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
-        box-shadow: 0px 0px 10px -5px rgba(255,255,255,1);
+    .card-img {
+        -webkit-box-shadow: 0px 0px 10px -5px rgba(255, 255, 255, 1);
+        -moz-box-shadow: 0px 0px 10px -5px rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 10px -5px rgba(255, 255, 255, 1);
         width: 100%;
-	}
+    }
 }
 
-.filter-row{
+.filter-row {
     @include margin-left(5px);
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .card-img {
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
 }

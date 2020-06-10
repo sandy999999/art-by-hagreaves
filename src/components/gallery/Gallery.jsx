@@ -7,12 +7,13 @@ import Masonry from "./Masonry";
 import Filter from "./Filter";
 import { fetchProducts } from "../../store/actions/ProductActions";
 import Row from "react-bootstrap/Row";
-import Modal from "react-bootstrap/Modal";
 import ProductDetails from "../product/ProductDetails";
+import ModalWindow from "./ModalWindow";
 
 let brakePoints = [350, 500, 750];
 
 class Gallery extends Component {
+
   componentDidMount() {
     this.props.fetchProducts();
   }
@@ -21,22 +22,22 @@ class Gallery extends Component {
     const itemList = this.props.products.map((product) => {
       return (
         <div className="tile" key={product.id}>
-          <Card.Img
-            className="card_img"
-            src={`products/${product.id}.jpg`}
-            alt={product.title}
-          />
 
-          <Modal size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-            <Modal.Header closeButton />
-            <Modal.Body>
-              <img
-                className="modal_img"
-                src={`products/${product.id}.jpg`}
-                alt={product.title}
-              />
-            </Modal.Body>
-          </Modal>
+          <Toggle>
+            {({ open, handleClick }) => (
+            <>
+            <Card.Img
+              className="card_img"
+              src={`products/${product.id}.jpg`}
+              alt={product.title}
+              onClick={handleClick}
+            />
+            {open && 
+            <ModalWindow product={product} show={open} />  
+            }
+            </>
+            )}
+          </Toggle>
 
           <Toggle>
             {({ open, handleClick }) => (
@@ -48,7 +49,7 @@ class Gallery extends Component {
     });
 
     return (
-      <Container>
+      <Container className="gallery">
         <Row>
           <Filter />
         </Row>

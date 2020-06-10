@@ -22,18 +22,9 @@ class CartDropdown extends Component {
             </div>
           )}
           {cartItems.length > 0 && (
-            <Container>
+            <>
               <div className="added_items">
                 {cartItems.map((item) => (
-                  <div className="cart_item" key={item.id}>
-                    <img
-                      className="item_img"
-                      src={`products/${item.id}.jpg`}
-                      alt={item.title}
-                    />
-
-                    <b>x{item.count}</b>
-
                     <img
                       src={Trashcan}
                       className="trashcan"
@@ -42,10 +33,8 @@ class CartDropdown extends Component {
                         this.props.removeFromCart(this.props.cartItems, item)
                       }
                     />
-                  </div>
                 ))}
               </div>
-
               <b>
                 Total:{" "}
                 {Currency.formatCurrency(
@@ -55,7 +44,7 @@ class CartDropdown extends Component {
               <NavLink to="/checkout" exact>
                 <Button className="button">Checkout</Button>
               </NavLink>
-            </Container>
+            </>
           )}
         </div>
       </Container>

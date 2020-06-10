@@ -3,14 +3,22 @@
 }
 
 .navbar_flex {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    @include margin-top(20px);
+    top: 0;
+    left: 0;
+    background-color: $darkblue;
+    z-index: 1;
+}
+
+.sticky_header{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .icon {
-    width: 40px;
-    @include margin-right(15px);
+    width: 30px;
 }
 
 .navbar_icons {

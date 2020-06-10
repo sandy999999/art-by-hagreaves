@@ -1,16 +1,12 @@
-.filter-row{
+.filter-row {
     display: flex;
     flex-direction: row;
 }
 
-@media (min-width: $breakpoint-mobile) {
-    .select{
-        width: 85px;
-    }
+.sticky_filter{
+    position: fixed;
+    top: 75px;
+    z-index: 3;
+    background-color: rgba($darkblue, 0.5);
 }
 
-@media (min-width: $breakpoint-tablet) {
-    .select{
-        width: 150px;
-    }
-}

@@ -1,13 +1,15 @@
 .footer {
     width: 100vw;
+    bottom: 0;
     background-color: $darkblue;
+    height: 50px;
+    position: fixed;
 }
 
 .footer-link {
     color: white;
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
     @include padding(15px);
-
     &:hover {
         transform: scale(1.2);
         color: white;
@@ -20,13 +22,11 @@
     flex-direction: column;
 }
 
-.social-nav {
-    // flex-direction: row;
-}
-
 .footer-nav {
-    display: flex;
+    display: none;
     flex-direction: column;
+    @include margin-bottom(10px);
+    @include margin-top(10px);
 }
 
 .social-link {
@@ -45,15 +45,14 @@
 }
 
 @media (min-width: $breakpoint-tablet) {
-    .footer {
-        height: 50px;
-        bottom: 0;
-        left: 0;
-        position: fixed;
-    }
-
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
+    }
+    .footer-nav{
+        display: flex;
+    }
+    .mobile_show{
+        display: none;
     }
 }
