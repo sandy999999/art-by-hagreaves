@@ -3,6 +3,16 @@
     flex-direction: row;
 }
 
+.filter_icon{
+    cursor: pointer;
+    position: relative;
+    @include fontSize(30px);
+    @include padding-right(5px);
+    &:hover {
+        color: $sunset;
+    }
+}
+
 .sticky_filter{
     position: fixed;
     top: 75px;

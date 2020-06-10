@@ -8,9 +8,11 @@ export const addToCart = (items, product) => (dispatch) => {
   let productAlreadyInCart = false;
 
   cartItems.forEach((addedToCart) => {
-    if (addedToCart.id === product.id) {
+    if (addedToCart.type === "Prints") {
       addedToCart.count += 1;
       productAlreadyInCart = true;
+    } else{
+      addedToCart.count = 1;
     }
   });
 
