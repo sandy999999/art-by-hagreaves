@@ -12,13 +12,13 @@ function ProductDetails({ handleClick, open, product, addToCart, cartItems }) {
         <div className={`plus_icon ${open ? 'closed' : 'opened'}`} onClick={handleClick}>+       
         </div>
 
-        {open && (         
+        {open && (
             <Card.Body className="card_body">           
                 <Card.Title className="card_title">{product.title}</Card.Title>           
                 <Card.Text className="card_content">             
                     {product.description}             
                     <br />             
-                    <br />             
+                    <br />
                     <b>Size:</b> {product.dimensions}             
                     <br />             
                     <b>Price:</b> {currency.formatCurrency(product.price)}           

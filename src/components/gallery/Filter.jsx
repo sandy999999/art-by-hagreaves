@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { filterProductsSize, filterProductsType, sortProducts } from "../../store/actions/ProductActions";
+import {
+  filterProductsSize,
+  filterProductsType,
+  sortProducts,
+} from "../../store/actions/ProductActions";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
@@ -16,10 +20,7 @@ class Filter extends Component {
               className="form-control"
               value={this.props.sort}
               onChange={(event) => {
-                this.props.sortProducts(
-                  this.props.filteredProducts,
-                  event.target.value
-                );
+                this.props.sortProducts(this.props.filteredProducts, event.target.value);
               }}
             >
               <option value="">PRICE</option>
@@ -28,7 +29,7 @@ class Filter extends Component {
             </select>
           </Form.Label>
         </Col>
-        
+
         <Col md={4}>
           <Form.Label>
             Type
@@ -36,10 +37,7 @@ class Filter extends Component {
               className="form-control"
               value={this.props.type}
               onChange={(event) => {
-                this.props.filterProductsType(
-                  this.props.products,
-                  event.target.value
-                );
+                this.props.filterProductsType(this.props.products, event.target.value);
               }}
             >
               <option value="">TYPE</option>
@@ -58,10 +56,7 @@ class Filter extends Component {
               className="form-control"
               value={this.props.size}
               onChange={(event) => {
-                this.props.filterProductsSize(
-                  this.props.products,
-                  event.target.value
-                );
+                this.props.filterProductsSize(this.props.products, event.target.value);
               }}
             >
               <option value="">SIZE</option>
@@ -72,7 +67,6 @@ class Filter extends Component {
             </select>
           </Form.Label>
         </Col>
-
       </Row>
     );
   }
@@ -84,6 +78,8 @@ const mapStateToProps = (state) => ({
   type: state.products.type,
   sort: state.products.sort,
 });
-export default connect(mapStateToProps, { filterProductsSize, filterProductsType, sortProducts })(
-  Filter
-);
+export default connect(mapStateToProps, {
+  filterProductsSize,
+  filterProductsType,
+  sortProducts,
+})(Filter);

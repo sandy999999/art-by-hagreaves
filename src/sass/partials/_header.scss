@@ -1,34 +1,28 @@
-.logo{
+.logo {
     max-width: 150px;
 }
 
-@media (min-width: $breakpoint-tablet) {
-    .logo{
-        max-width: 300px;
-    }
-}
-
-.navbar_flex{
+.navbar_flex {
     justify-content: space-between;
     align-items: center;
     @include margin-top(20px);
 }
 
-.icon{
+.icon {
     width: 40px;
     @include margin-right(15px);
 }
 
-.navbar_icons{
+.navbar_icons {
     display: inline-flex;
     align-items: center;
 }
 
-.hamburger_container{
+.hamburger_container {
     cursor: pointer;
 }
 
-.dropdown_menu{
+.dropdown_menu {
     position: absolute;
     right: 0;
     background-color: white;
@@ -37,15 +31,23 @@
     @include padding-right(5px);
     @include margin-top(20px);
 
-    .dropdown_link{
+    .dropdown_link {
         text-decoration: none;
         color: $darkblue;
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
         @include padding(5px);
-        &:hover{
+
+        &:hover {
             color: $purple;
             transform: scale(1.2);
             text-decoration: none;
         }
+    }
+}
+
+
+@media (min-width: $breakpoint-tablet) {
+    .logo {
+        max-width: 300px;
     }
 }

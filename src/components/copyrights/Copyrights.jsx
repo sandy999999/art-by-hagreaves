@@ -14,7 +14,11 @@ export function About() {
                 </Row>
                 <Row className="row">
                     <Col md={6}>
-                        <p>Hi! Welcome to my website. This is where I showcase my art, thoughts, sketches, events and exhibitions. Take a look and dont hesitate to contact me if you find anything of interest.</p>
+                        <p>Thomas Hargreaves is an artist from Oslo who through the medium of painting attempts to step outside of his self- identifications in order to express the inexpressible and be a clear channel for the infinite creative stream. In turn this process paradoxically allows him to further know him Self.
+                        </p>
+                        <p>
+                        He works on canvas and murals as well as creative projects for private and commerce. Please contact for any inquires.
+                        </p>
                     </Col>
                     <Col md={6} className="[ justify-content-center ]">
                         <img className="bio_img" src={Bio} alt="Artist Thomas Hargreaves"/>
