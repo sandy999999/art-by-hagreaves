@@ -28,6 +28,7 @@ function Header() {
 
     return(
 
+        <Container>
         <Navbar onScroll={handleScroll} className={`navbar_flex ${scrollPosition ? 'sticky_header' : ''}`}>
             <NavLink to="/" exact>
                 <img className="logo" src={Logo} alt="Hargreaves Logo"/>
@@ -81,6 +82,7 @@ function Header() {
             </div>
 
         </Navbar>
+        </Container>
 
 )}
 

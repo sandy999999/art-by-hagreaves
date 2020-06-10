@@ -8,5 +8,11 @@
     top: 75px;
     z-index: 3;
     background-color: rgba($darkblue, 0.5);
+    @include margin-right(15px);
 }
 
+@media (min-width: $breakpoint-tablet) {
+    .sticky_filter {
+        @include margin-right(15px);
+    }
+}
