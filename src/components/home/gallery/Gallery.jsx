@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
-import Toggle from "../layout/Toggle";
+import Toggle from "../../layout/Toggle";
 import Masonry from "./Masonry";
-import Filter from "./Filter";
-import { fetchProducts } from "../../store/actions/ProductActions";
+import Filter from "./filter/Filter";
+import { fetchProducts } from "../../../store/actions/ProductActions";
 import Row from "react-bootstrap/Row";
-import ProductDetails from "../product/ProductDetails";
+import ProductDetails from "../../product/ProductDetails";
 import ModalWindow from "./ModalWindow";
 
 let brakePoints = [350, 500, 750];
@@ -32,8 +32,8 @@ class Gallery extends Component {
               alt={product.title}
               onClick={handleClick}
             />
-            {open && 
-            <ModalWindow product={product} show={open} />  
+            {open &&
+            <ModalWindow product={product} show={open} handleClick={handleClick} />
             }
             </>
             )}

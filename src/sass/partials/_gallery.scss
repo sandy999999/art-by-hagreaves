@@ -53,6 +53,11 @@
     @include margin-left(5px);
 }
 
+.modal_img{
+    max-width: 100%;
+}
+
+
 @media (min-width: $breakpoint-tablet) {
     .card-img {
         transition: all 0.3s cubic-bezier(.25, .8, .25, 1);

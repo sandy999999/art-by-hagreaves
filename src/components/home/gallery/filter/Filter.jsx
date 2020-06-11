@@ -9,16 +9,15 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import Toggle from "../../../layout/Toggle";
-import ShowFilter from "./FilterToggle";
 
-function Filter(props, filterButton) {
+function Filter(props) {
 
   const [scrollPosition, setSrollPosition] = useState(0);
   const handleScroll = () => {
       const position = window.pageYOffset;
       setSrollPosition(position);
   };
-  
+
   useEffect(() => {
       window.addEventListener('scroll', handleScroll, { passive: true });
 
@@ -31,7 +30,7 @@ function Filter(props, filterButton) {
       <Toggle>
       {({ open, handleClick }) =>(
             <Row onScroll={handleScroll} className={`filter_row ${scrollPosition ? 'sticky_filter' : ''}`}>
-            {open && 
+            {open &&
             <>
             <Col>
               <Form.Label>
@@ -89,7 +88,7 @@ function Filter(props, filterButton) {
             </Col>
           </>
         }
-        <ShowFilter filterButton={false} className={`filter_icon ${open ? 'closed' : 'opened'}`} onClick={handleClick}/>
+        <div className={`filter_icon ${open ? 'closed' : 'opened'}`} onClick={handleClick}>+</div>
         </Row>
       )}
       </Toggle>

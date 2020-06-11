@@ -8,7 +8,6 @@ import Row from "react-bootstrap/Row";
 import Heading from "../layout/Heading";
 import Trashcan from "../../images/icons/trash-blue.png";
 import Card from "react-bootstrap/Card";
-import PaypalExpressBtn from "react-paypal-express-checkout";
 
 class Checkout extends Component {
   render() {
@@ -64,7 +63,6 @@ class Checkout extends Component {
                   )}
                 </b>
               </div>
-              <PaypalExpressBtn />
             </Col>
           </Row>
         )}

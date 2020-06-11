@@ -3,25 +3,25 @@ import Heading from "../layout/Heading";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Bio from "../../images/compressed/bio.jpg";
-
 
 export function About() {
     return (
         <Container>
-                <Row className="heading_row">
-                    <Heading title="Copyrights " />
-                </Row>
+                <Heading title="Copyrights " />
                 <Row className="row">
-                    <Col md={6}>
-                        <p>Thomas Hargreaves is an artist from Oslo who through the medium of painting attempts to step outside of his self- identifications in order to express the inexpressible and be a clear channel for the infinite creative stream. In turn this process paradoxically allows him to further know him Self.
+                    <Col>
+                        <p>
+                        All rights reserved: Thomas Hargreaves - Andreas Sandersen - 2020
                         </p>
                         <p>
-                        He works on canvas and murals as well as creative projects for private and commerce. Please contact for any inquires.
+                        Social Media icons by <b><a href="https://www.flaticon.com/authors/pixel-perfect">Pixel Perfect</a></b>
                         </p>
-                    </Col>
-                    <Col md={6} className="[ justify-content-center ]">
-                        <img className="bio_img" src={Bio} alt="Artist Thomas Hargreaves"/>
+                        <p>
+                        Shopping Cart icon by <b><a href="https://www.flaticon.com/authors/freepik">Freepik</a></b>
+                        </p>
+                        <p>
+                        Font license: Public Domain, GPL, OFL. EXO font. Designed by <b><a href="https://www.1001freefonts.com/search.php?d=1&q=Natanael+Gama">Nathanael Gama</a></b>
+                        </p>
                     </Col>
                 </Row>
         </Container>

@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 
-export default function ModalWindow({ product, show }) {   
-    const [modalShow, setModalShow] = React.useState(false);
-
-    return (     
-          <Modal 
-          size="lg" 
-          aria-labelledby="contained-modal-title-vcenter" 
-          centered 
-          show={modalShow} 
-          onHide={() => setModalShow(false)}
+export default function ModalWindow({ product, show, handleClick }) {
+    return (
+          <Modal
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+          show={show}
+          onHide={handleClick}
           >
               <Modal.Header closeButton />
               <Modal.Body>
@@ -21,5 +19,5 @@ export default function ModalWindow({ product, show }) {
                   />
               </Modal.Body>
            </Modal>
-    ) 
+    )
 }
