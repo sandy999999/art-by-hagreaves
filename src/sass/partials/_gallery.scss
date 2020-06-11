@@ -55,6 +55,15 @@
 
 .modal_img{
     max-width: 100%;
+    @include margin-bottom(5px);
+}
+
+.modal{
+    color: $darkblue;
+}
+
+.modal_footer{
+    justify-content: space-between;
 }
 
 

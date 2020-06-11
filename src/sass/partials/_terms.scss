@@ -1,0 +1,8 @@
+.email{
+    text-decoration: none;
+    color: #ffffff;
+    &:hover{
+        text-decoration: none;
+        color: $sunset;
+    }
+}

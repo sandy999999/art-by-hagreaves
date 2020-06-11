@@ -44,6 +44,11 @@ h2{
     @include fontSize(20px);
 }
 
+h3{
+    @include fontSize(18px);
+    @include margin-left(15px);
+}
+
 .button {
     background-color: $purple;
     border: none;
