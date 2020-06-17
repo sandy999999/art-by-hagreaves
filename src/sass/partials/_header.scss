@@ -40,6 +40,7 @@
     right: 0;
     background-color: white;
     border: 1px solid;
+    align-items: center;
     @include padding-left(5px);
     @include padding-right(5px);
     @include margin-top(20px);

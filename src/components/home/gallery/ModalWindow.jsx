@@ -35,10 +35,10 @@ function ModalWindow({ product, show, handleClick, addToCart, cartItems }) {
                   />
               </Modal.Body>
               <Modal.Footer className="modal_footer">
+              {AddToCartDisplayed}
+              {PriceDisplayed}
               <div>{product.description}</div>
               <div><b>Size:</b> {product.dimensions}</div>
-              {PriceDisplayed}
-              {AddToCartDisplayed}
               </Modal.Footer>
            </Modal>
     )

@@ -1,11 +1,11 @@
-.footer {
-    width: 100vw;
+.footer{
     bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: $darkblue;
-    height: 50px;
-    position: fixed;
-}
-
+    position: absolute;
+ }
+ 
 .footer-link {
     color: white;
     transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
@@ -17,16 +17,9 @@
     }
 }
 
-.footer-container {
+.footer-nav {
     display: flex;
     flex-direction: column;
-}
-
-.footer-nav {
-    display: none;
-    flex-direction: column;
-    @include margin-bottom(10px);
-    @include margin-top(10px);
 }
 
 .social-link {
@@ -49,11 +42,5 @@
     .footer-container {
         flex-direction: row;
         justify-content: space-between;
-    }
-    .footer-nav{
-        display: flex;
-    }
-    .mobile_show{
-        display: none;
     }
 }

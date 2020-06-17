@@ -9,24 +9,25 @@
 
 @include font-face("Exo", "../../fonts/exo/Exo-Black", 400, normal);
 
-
+html, body{
+    height: 100%;
+}
 body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     background-color: $darkblue;
     overflow-x: hidden;
     color: white;
     font-family: Exo, segoe ui, helvetica, arial;
 }
 
-#main-container {
+#main-content {
     margin: 0;
     padding: 0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-}
-
-#main-content {
-    flex: 1;
     @include margin-top(10px);
 }
 

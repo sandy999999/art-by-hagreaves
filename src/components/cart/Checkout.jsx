@@ -7,11 +7,25 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Heading from "../layout/Heading";
 import Trashcan from "../../images/icons/trash-blue.png";
-import Card from "react-bootstrap/Card";
+import AddQuantityButton from "./AddQuantityButton";
+import SubtractQuantityButton from "./SubtractQuantityButton";
 
 class Checkout extends Component {
   render() {
     const { cartItems } = this.props;
+
+    let Prints = cartItems.filter((item) => {
+      return item.type === "Prints"
+    });
+
+    let AddSubtract = cartItems.map((item) => {
+      if (item.type === "Prints") {
+        return <><AddQuantityButton /><SubtractQuantityButton /></>
+      } else{
+        return null;
+      }
+    })
+  
 
     return (
       <Container>
@@ -21,39 +35,43 @@ class Checkout extends Component {
           {cartItems.length === 0 ? (
             "Basket is empty"
           ) : (
-            <div>You have {cartItems.length} items in the basket.</div>
+            <div className="cart_count">You have {cartItems.length} items in the basket.</div>
           )}
         </Row>
 
         {cartItems.length > 0 && (
+          <>
           <Row>
-            <Col>
               {cartItems.map((item) => (
-                <Col>
-                  <Card.Body>
-                    <Card.Img
+              <Col key={item.id}>
+                <ul className="checkout_list">
+                  <li className="checkout_item">
+                    <img
                       className="checkout_img"
                       src={`products/${item.id}.jpg`}
                       alt={item.title}
                     />
-                    <Card.Title>{item.title}</Card.Title>
-                    <Card.Text className="card_content">
-                      <br />
+                    <h4>{item.title}</h4>
+                    <div className="checkout_info">
+                      <div className="item_count">
                       {item.count} X {util.formatCurrency(item.price)}
-                    </Card.Text>
-                    <img
+                      </div>
+                      {AddSubtract}
+                      <img
                       src={Trashcan}
                       className="trashcan"
                       alt="Remove from cart"
                       onClick={(e) =>
                         this.props.removeFromCart(this.props.cartItems, item)
                       }
-                    />
-                  </Card.Body>
-                </Col>
+                      />
+                    </div>
+                  </li>
+                </ul>
+              </Col>
               ))}
-            </Col>
-
+          </Row>
+          <Row>
             <Col md={2}>
               <div>
                 <b>
@@ -65,6 +83,7 @@ class Checkout extends Component {
               </div>
             </Col>
           </Row>
+          </>
         )}
       </Container>
     );
