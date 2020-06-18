@@ -1,10 +1,12 @@
 .footer{
-    bottom: 0;
-    left: 0;
     width: 100%;
     background-color: $darkblue;
-    position: absolute;
- }
+}
+
+.footer-container {
+        flex-direction: column;
+        justify-content: space-between;
+}
  
 .footer-link {
     color: white;

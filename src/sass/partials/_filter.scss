@@ -1,11 +1,10 @@
 .filter-row {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .filter_icon{
     cursor: pointer;
-    position: relative;
     @include fontSize(30px);
     @include padding-right(5px);
     &:hover {
@@ -15,7 +14,6 @@
 
 .sticky_filter{
     position: fixed;
-    top: 75px;
     z-index: 3;
     background-color: rgba($darkblue, 0.5);
     @include margin-right(15px);
@@ -23,6 +21,10 @@
 
 @media (min-width: $breakpoint-tablet) {
     .sticky_filter {
+        top: 75px;
         @include margin-right(15px);
+    }
+    .filter-row {
+        flex-direction: row;
     }
 }

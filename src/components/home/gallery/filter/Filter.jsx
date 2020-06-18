@@ -30,9 +30,10 @@ function Filter(props) {
       <Toggle>
       {({ open, handleClick }) =>(
             <Row onScroll={handleScroll} className={`filter_row ${scrollPosition ? 'sticky_filter' : ''}`}>
+              <div className={`filter_icon ${open ? 'closed' : 'opened'}`} onClick={handleClick}>+</div>
             {open &&
             <>
-            <Col>
+            <Col sm={3}>
               <Form.Label>
                 Sort by
                 <select
@@ -49,7 +50,7 @@ function Filter(props) {
               </Form.Label>
             </Col>
 
-            <Col>
+            <Col sm={3}>
               <Form.Label>
                 Type
                 <select
@@ -68,7 +69,7 @@ function Filter(props) {
               </Form.Label>
             </Col>
 
-            <Col>
+            <Col sm={3}>
               <Form.Label>
                 Size
                 <select
@@ -88,7 +89,6 @@ function Filter(props) {
             </Col>
           </>
         }
-        <div className={`filter_icon ${open ? 'closed' : 'opened'}`} onClick={handleClick}>+</div>
         </Row>
       )}
       </Toggle>

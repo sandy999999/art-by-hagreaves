@@ -73,7 +73,7 @@ class Checkout extends Component {
           </Row>
           <Row>
             <Col md={2}>
-              <div>
+              <div className="checkout_total">
                 <b>
                   Sum:{" "}
                   {util.formatCurrency(

@@ -20,6 +20,10 @@
     justify-content: space-between;
 }
 
+.checkout_total{
+    @include margin-left(25px);
+}
+
 .paypal_button {
     &:hover {
         transform: scale(1.2);
