@@ -70,18 +70,6 @@ h3{
     color: $sunset;
 }
 
-.cta {
-    text-decoration: none;
-    color: $sunset;
-    font-weight: bold;
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-
-    &:hover {
-        text-decoration: none;
-        color: $purple;
-    }
-}
-
 .heading {
     @include margin-left(15px);
 }

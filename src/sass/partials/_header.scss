@@ -52,10 +52,14 @@
         @include padding(5px);
 
         &:hover {
-            color: $purple;
+            color: $sunset;
             transform: scale(1.2);
             text-decoration: none;
         }
+    }
+    .dropdown_link--cta{
+        color: $purple;
+        font-weight: bold;
     }
 }
 

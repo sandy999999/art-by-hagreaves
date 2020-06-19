@@ -92,7 +92,7 @@ function Header() {
                       <img className="icon" src={Twitch} alt="Hargreaves Twitch Stream" />
                     </a>
                     <a
-                      className="[ dropdown_link dropdown_link-cta cta ]"
+                      className="[ dropdown_link dropdown_link--cta cta ]"
                       href="https://streamlabs.com/templito/tip"
                     >
                       Donate
